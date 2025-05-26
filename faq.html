@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - JesMar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      color: #02423e;
+    }
+
+    header {
+      background-color: #02423e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .faq-item {
+      background: white;
+      margin-bottom: 15px;
+      border-left: 5px solid #fcb017;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+
+    .faq-question {
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 15px 15px;
+      display: none;
+    }
+
+    footer {
+      background: #02423e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Foire aux Questions (FAQ)</h1>
+</header>
+
+<div class="faq-container">
+
+  <div class="faq-item">
+    <div class="faq-question">Y a-t-il des cours du soir ?</div>
+    <div class="faq-answer">Oui, les formations Cisco CCNA se déroulent en cours du soir, généralement de 18h à 21h en semaine.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Peut-on suivre une formation même en étant à l’université ?</div>
+    <div class="faq-answer">Oui. Les formations de vacances sont ouvertes aux étudiants universitaires, aux lycéens et aux professionnels.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Faut-il avoir des connaissances en informatique pour s’inscrire ?</div>
+    <div class="faq-answer">Pas nécessairement. Certaines séries (comme DWM ou MMV) commencent à un niveau débutant. Les prérequis sont indiqués sur chaque fiche formation.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Les formations sont-elles certifiantes ?</div>
+    <div class="faq-answer">Oui. Certaines formations comme la CCNA sont certifiantes. D’autres délivrent des attestations de fin de formation reconnues localement.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Comment s’inscrire en ligne ?</div>
+    <div class="faq-answer">En allant sur la page "Formations", tu peux cliquer sur "S'inscrire", remplir le formulaire et envoyer les documents nécessaires.</div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 JesMar Network and Cybersecurity Academy
+</footer>
+
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      q.classList.toggle('active');
+      const answer = q.nextElementSibling;
+      answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
