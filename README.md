@@ -127,3 +127,13 @@ composer require fedapay/fedapay-php
 
 php artisan tinker
 composer dump-autoload
+```
+
+
+JesMar/
+│── public/               → Front-End (HTML/CSS/JS)
+│── resources/views/      → Vues Laravel
+│── app/Models/           → Modèles (Élèves, Professeurs, Classes…)
+│── app/Http/Controllers/ → Logique backend
+│── database/migrations/  → Structure de la base de données
+│── storage/              → Fichiers téléversés
