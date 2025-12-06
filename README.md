@@ -1,59 +1,139 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# **JesMar**
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Plateforme de Gestion Scolaire Technique  
+**Développement Web – HTML / CSS / JS / Laravel**  
+Année Académique **2025–2026**
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 **Nom du Projet**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# **JesMar – Système de Gestion Scolaire Technique**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+JesMar est une application web responsive destinée aux écoles techniques.  
+Elle permet la gestion complète des élèves, enseignants, programmes, emplois du temps et ressources pédagogiques, tout en offrant une interface moderne fidèle à une maquette fournie au préalable.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+##  **Membres de l'équipe**  
+- **NASCIMENTO Zachario**  
+- **CAKPO Frégis**  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+##  **Objectifs du Projet**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Digitaliser la gestion scolaire de JesMar.
+- Offrir une interface intuitive et moderne basée sur HTML/CSS/JS pur.
+- Faciliter la communication interne : annonces, documents, événements.
+- Permettre la gestion académique complète (notes, filières, modules).
+- Déployer un système sécurisé avec rôles et permissions.
+- Faciliter l’accès aux supports de cours et documents pédagogiques.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+##  **Fonctionnalités Principales**
 
-## Contributing
+###  Gestion des utilisateurs
+- Comptes Admin / Professeur / Élève  
+- Rôles & permissions  
+- Authentification sécurisée  
+- Double authentification Google (2FA)  
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+###  Gestion scolaire
+- CRUD des filières, classes et modules  
+- Affectation des professeurs  
+- Saisie, édition et consultation des notes  
+- Génération automatique des bulletins  
 
-## Code of Conduct
+###  Gestion des événements & emplois du temps
+- Emplois du temps par classe  
+- Planning des examens  
+- Gestion du calendrier académique  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+###  Ressources pédagogiques
+- Téléversement de cours, documents PDF, images, vidéos  
+- Accès sécurisé pour les apprenants  
 
-## Security Vulnerabilities
+###  Communication
+- Publication d’annonces  
+- Gestion des actualités  
+- Espace FAQ  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+###  Interface utilisateur
+- Front-End en **HTML5 / CSS3 / JavaScript pur**  
+- Respect strict de la maquette PDF  
+- Interface responsive  
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##  **Technologies Utilisées**
+
+### **Front-End**
+- HTML5  
+- CSS3 (Flexbox, Grid, animations)  
+- JavaScript Vanilla  
+
+### **Back-End**
+- Laravel 12.x / 5.23.1  
+- PHP 8.2  
+- MySQL / MariaDB  
+
+### **Outils**
+- VS Code  
+- Git / GitHub  
+- Composer  
+- PHPMailer (réinitialisation mot de passe + token)  
+- Simple QrCode  
+- Google2FA  
+- GuzzleHTTP  
+- FedaPay (optionnel pour paiements scolaires)
+
+---
+
+##  **Installation & Lancement du Projet**
+
+```bash
+composer create-project --prefer-dist laravel/laravel JesMar
+git init
+git add .
+git commit -m "Initial commit du projet JesMar"
+git remote add origin https://github.com/ZacharioMcarthur/JesMar.git
+git branch -M main
+git push -u origin main
+
+php artisan storage:link
+
+# Gestion des médias lourds
+git lfs install
+git lfs track "*.mp4"
+git lfs track "*.mov"
+git lfs track "*.png"
+git lfs track "*.jpg"
+git lfs track "*.mkv"
+git lfs track "*.avi"
+git lfs track "*.pdf"
+git add .gitattributes
+
+# Packages importants
+composer require feedapi/feedapi
+composer require pragmarx/google2fa-laravel
+php artisan vendor:publish --provider="PragmaRX\Google2FALaravel\ServiceProvider"
+php artisan make:migration add_google2fa_secret_to_users_table --table=users
+
+composer require simplesoftwareio/simple-qrcode
+composer require guzzlehttp/guzzle
+composer require fedapay/fedapay-php
+
+php artisan tinker
+composer dump-autoload
+```
+
+
+JesMar/
+│── public/               → Front-End (HTML/CSS/JS)
+│── resources/views/      → Vues Laravel
+│── app/Models/           → Modèles (Élèves, Professeurs, Classes…)
+│── app/Http/Controllers/ → Logique backend
+│── database/migrations/  → Structure de la base de données
+│── storage/              → Fichiers téléversés

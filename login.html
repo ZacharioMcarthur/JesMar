@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JesMar - Connexion</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    .login-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .login-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .login-header img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    
+    .form-floating label {
+      color: #666;
+    }
+    
+    .btn-login {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-login:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    .login-links {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    
+    .login-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .login-links a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="text-white p-3" class="container-fluid">
+      <img class="logo" src="assets/images/Logo-JesMar.png" alt="Logo JesMar">
+      <div>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="home.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="formation-and-services.html">Formations</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="events.html">Evénements</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <div class="login-container">
+      <div class="login-header">
+        <img src="assets/images/Logo-JesMar.png" alt="Logo JesMar">
+        <h2>Connexion à votre espace</h2>
+        <p class="text-muted">Accédez à votre compte étudiant ou administratif</p>
+      </div>
+      
+      <form>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+          <label for="email"><i class="fas fa-envelope me-2"></i>Adresse email</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+          <label for="password"><i class="fas fa-lock me-2"></i>Mot de passe</label>
+        </div>
+        
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="remember">
+          <label class="form-check-label" for="remember">Se souvenir de moi</label>
+        </div>
+        
+        <button type="submit" class="btn btn-login w-100">
+          <i class="fas fa-sign-in-alt me-2"></i>Se connecter
+        </button>
+        
+        <div class="login-links">
+          <a href="forgot-password.html">Mot de passe oublié ?</a><br>
+          <span class="text-muted">Vous n'avez pas de compte ? </span>
+          <a href="register.html">Créer un compte</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>JesMar</h5>
+          <p>École Technique et Professionnelle formant des techniciens compétents pour les métiers de demain.</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0 text-center">
+          <h5>Liens utiles</h5>
+          <div class="footer-links">
+            <a href="home.html">Accueil</a><br>
+            <a href="formation-and-services.html">Formations</a><br>
+            <a href="contact.html">Contact</a><br>
+            <a href="events.html">Événements</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Réseaux sociaux</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <p class="mt-3">
+            <i class="fas fa-phone me-2"></i>+229 52 83 11 11<br>
+            <i class="fas fa-envelope me-2"></i>jesmar.tech.org@gmail.com
+          </p>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 JesMar - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
