@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow: hidden;
+    background: linear-gradient(45deg, rgba(0, 128, 64, 0.863), rgba(0, 197, 89, 0.836));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.popup{
+    background: white;
+    width: 440px;
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+    height: 80vh;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: appear 3s forwards;
+}
+@keyframes appear {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.popup h1{
+    margin-bottom: 1.3em;
+}
+.popup p{
+    margin: 5px;
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #888585;
+}
+.popup a{
+    color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: .5s ease;
+}
+.popup a:hover{
+    color: #009344;
+}
+form{
+    width: 100%;
+}
+.input-box{
+    position: relative;
+    margin: 30px;
+    height: 35px;
+    font-size: 12px;
+    border-bottom: 2px solid #d9ebd9;
+    border-radius: 10px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.input-box label{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: #a5b3a5;
+    transition: .5s ease;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    font-size: 10px;
+    transform: translateY(-20px);
+    color: #e8f5e8;
+}
+.input-box svg{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transition: .5s ease;
+    color: #616961;
+    width: 20px;
+    height: 20px;
+}
+button{
+    width: 82%;
+    background: #009344;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.1em;
+    transition: .5s ease;
+}
+button:hover{
+    background: #333;
+    animation: survol infinite 1.5s forwards;
+}
+@keyframes survol {
+    0%{
+        width: 82%;
+    }
+    50%{
+        width: 85%;
+    }
+    100%{
+        width: 82%;
+    }
+}
+.text{
+    padding: 3% 8%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+#accueil{
+    color: white;
+    position: relative;
+
+}
+#accueil::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+#accueil:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.nom{
+    display: flex;
+    align-items: center;
+    animation: appear 3s forwards;
+    margin: 8% 0 5% 0;
+}
+.nom img{
+    width: 70px;
+    margin-right: 10px;
+}
+.nom h1{
+    font-size: 3em;
+}
+.message h1{
+    font-size: 3em;
+    opacity: 0;
+    animation: animate 2s ease-in-out 1s 1 forwards;
+}
+.message p{
+    font-size: 1em;
+    animation: animate 2s ease-in-out 1s 1 forwards;
+    opacity: 0;
+}
+#paragraph{
+    width: 40%;
+    color: #ffffffe7;
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0;
+    animation: animate 2s ease-in-out 1.2s 1 forwards;
+}
+#alert{
+    width: 40%;
+    color: #ffffffe7;
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0;
+    animation: animate 2s 1.3s  forwards;
+}
+#alert a{
+    color: white;
+    text-decoration: underline;
+    transition: .5s ease;
+}
+#alert a:hover{
+    color: rgb(0, 255, 76);
+}
+@keyframes animate {
+    from{
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+@media (max-width: 768px) {
+.popup{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+    .text{
+        position: absolute;
+        top: 0;
+        background: #009344;
+        z-index: 1;
+        display: none;
+    }
+    .nom{
+    margin: 5%;
+}
+.nom img{
+    width: 50px;
+    margin-right: 10px;
+}
+.nom h1{
+    font-size: 1.8em;
+}
+.message h1{
+    font-size: 2em;
+    opacity: 0;
+    animation: animate 2s ease-in-out 1s 1 forwards;
+}
+#paragraph{
+    width: 100%;
+
+}
+#alert{
+    width: 100%;
+    
+}
+}

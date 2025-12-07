@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.fond{
+    display: none;
+    background: rgba(0, 0, 0, 0.452);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    position: absolute;
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+h3{
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.719);
+    margin-bottom: 2%;
+}
+.mobile {
+    display: none;
+}
+
+.closemenu {
+    display: none;
+}
+
+.menu {
+    width: 20%;
+    height: 100vh;
+    background: #ffc00215;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu .compte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 10%;
+}
+
+.menu .compte img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+.menu h2 {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.menu svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.menu .principal {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu p {
+    font-size: 0.6em;
+    color: rgba(0, 0, 0, 0.466);
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.menu a {
+    color: rgba(0, 0, 0, 0.61);
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    font-weight: 530;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+.menu li:hover {
+    color: #ffc002;
+    background: white;
+}
+
+.menu li:hover a {
+    color: #ffc002;
+}
+.menu .index {
+    color: #ffc002;
+    background: white;
+}
+
+.menu .index a {
+    color: #ffc002;
+}
+.menu .general {
+    padding-bottom: 10vh;
+}
+
+.fenetre {
+    width: 80%;
+}
+
+.barre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.barre h1 {
+    color: rgba(0, 0, 0, 0.664);
+    font-size: 1em;
+    margin-left: 5%;
+}
+
+.espaces {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.espaces button svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.espaces button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.397);
+    font-weight: 550;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+}
+
+.espaces img {
+    width: 35px;
+    height: 35px;
+}
+
+.user {
+    margin-left: 5%;
+}
+.effectifs{
+    padding: 2% 5%;
+}
+.effectifs .stats{
+    display: flex;
+}
+.effectifs .effectif{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    width: 20%;
+    height: 15vh;
+    margin: 1%;
+}
+.effectifs .effectif .filiere{
+    margin: 10%;
+}
+.effectifs .effectif .filiere img{
+    width: 30px;
+    height: 30px;
+}
+.effectifs .effectif .filiere P{
+    font-size: 0.6em;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+}
+.effectifs .effectif .stat{
+    margin: 5%;
+    width: 50%;
+}
+.effectifs .effectif .stat p{
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.616);
+    margin: 2%;
+}
+.effectifs .effectif .stat p span{
+    margin: 0 8%;
+}
+.effectifs .effectif .stat h1{
+    color: rgba(0, 0, 0, 0.616);
+}
+.inscriptions{
+    padding: 2% 5%;
+    display: flex;
+}
+.inscriptions .liste .inscrits{
+    width: 30vw;
+    height: 45vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 1%;
+}
+.inscriptions .liste .inscrits .inscrit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+.inscriptions .liste .inscrits .inscrit:hover{
+    background: #0093451a;
+}
+.inscriptions .liste .inscrits .inscrit .infos{
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+.inscriptions .liste .inscrits .inscrit .infos .photo{
+    margin: 5%;
+}
+.inscriptions .liste .inscrits .inscrit .infos .photo img{
+    width: 40px;
+    height: 40px;
+}
+.inscriptions .liste .inscrits .inscrit .infos .text h2{
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.897);
+    transition: .5s ease;
+}
+.inscriptions .liste .inscrits .inscrit:hover .infos .text h2{
+    color: #009344;
+}
+.inscriptions .liste .inscrits .inscrit .infos .text p{
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.63);
+    transition: .5s ease;
+}
+.inscriptions .liste .inscrits .inscrit:hover .infos .text p{
+    color: #009344;
+}
+.inscriptions .liste .inscrits .inscrit .date{
+    width: 25%;
+}
+.inscriptions .liste .inscrits .inscrit .date p{
+    font-size: 0.8em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.897);
+    transition: .5s ease;
+}
+.inscriptions .liste .inscrits .inscrit:hover .date p{
+    color: #009344;
+}
+
+.inscriptions .details .infos .photo{
+    margin: 5%;
+}
+.details{
+    width: 60%;
+    margin-left: 3%;
+    position: relative;
+}
+.inscriptions .details .informations .closeinfos, .closemess{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: black;
+    background: transparent;
+    border: none;
+}
+.inscriptions .details .informations .closeinfos svg, .closemess{
+    color: rgba(0, 0, 0, 0.582);
+    width: 25px;
+    height: 25px;
+}
+.informations{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.199);
+    transform: scale(0);
+    transition: .3s ease;
+    position: relative;
+}
+.details p{
+    display: flex;
+    align-items: center;
+}
+.details svg{
+    width: 15px;
+    height: 15px;
+    color: #009344;
+    margin-right: 5px;
+}
+.inscriptions .details .infos{
+    display: flex;
+    align-items: center;
+}
+.inscriptions .details .infos .photo img{
+    width: 70px;
+    height: 70px;
+}
+.inscriptions .details .infos .text h2{
+    font-size: 1em;
+    margin-bottom: 5%;
+    color: rgba(0, 0, 0, 0.897);
+    transition: .5s ease;
+}
+.inscriptions .details .infos .text p{
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.63);
+    transition: .5s ease;
+}
+.inscriptions .details .informations .boutons button{
+    padding: 2% 3%;
+    margin: 2%;
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: .5s ease;
+}
+.inscriptions .details .informations .boutons .valider{
+    background: #00742d;
+}
+.inscriptions .details .informations .boutons .valider:hover{
+    color: #00742d;
+    background: white;
+    box-shadow: 0 0 3px #00742c79;
+}
+.inscriptions .details .informations .boutons .suppr{
+    background: rgb(160, 0, 0);
+}
+.inscriptions .details .informations .boutons .suppr:hover{
+    color: rgb(160, 0, 0);
+    background: white;
+    box-shadow: 0 0 3px rgba(160, 0, 0, 0.521);
+}
+.info-box{
+    display: flex;
+}
+.info-box .one, .info-box .two, .info-box .three{
+    flex: 1;
+}
+.info-box .box{
+    margin: 10%;
+}
+.info-box .box h3{
+    margin-bottom: 2%;
+}
+.info-box .box p{
+    font-size: 0.7em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.messages{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 50vh;
+    width: 30vw;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.534);
+    border-radius: 3px;
+    padding: 1%;
+    transition: .2s ease;
+    opacity: 0;
+    z-index: 1;
+}
+.message{
+    border-radius: 3px;
+    padding: 2%;
+}
+.message:hover{
+    background: #0093451a;
+}
+.message p{
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.726);
+}
+.messages .closemess{
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .fond {
+        z-index: 98;
+    }
+
+    .menu {
+        position: absolute;
+        left: -110%;
+        width: 96%;
+        height: 100vh;
+        transition: .5s ease;
+        overflow: hidden;
+        background: white;
+        z-index: 99;
+    }
+
+    .closemenu {
+        display: flex;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        background: transparent;
+        border: none;
+        color: rgba(0, 0, 0, 0.658);
+    }
+
+    .closemenu svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .fenetre {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    .barre {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 4px 8px;
+    }
+
+    .mobile h1 {
+        font-size: 0.5em;
+    }
+
+    .mobile .espaces {
+        margin: 0;
+    }
+
+    .mobile .espaces a svg,
+    .espaces button svg {
+        margin-right: 0;
+    }
+    .fenetre{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .effectifs .stats{
+    width: 100%;
+    overflow-x: scroll;
+}
+    .effectifs .effectif{
+        min-width: 50vw;
+}
+.inscriptions .liste{
+    width: 100%;
+}
+.inscriptions .liste .inscrits{
+    width: 100%;
+}
+.details{
+    position: absolute;
+    left: 0;
+    background: white;
+    width: 95vw;
+    transform: scale(0);
+    transition: .3s ease;
+}
+.messages{
+    top: 5%;
+    width: 80vw;
+}
+}

@@ -6,7 +6,7 @@ Année Académique **2025–2026**
 
 ---
 
-## 📌 **Nom du Projet**
+##  **Nom du Projet**
 
 # **JesMar – Système de Gestion Scolaire Technique**
 

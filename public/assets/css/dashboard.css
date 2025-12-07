@@ -1,0 +1,490 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.mobile{
+    display: none;
+}
+.closemenu{
+    display: none;
+}
+.menu{
+    width: 20%;
+    height: 96vh;
+    background: rgb(3, 61, 25);
+    margin: 10px 5px 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu .compte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 10%;
+}
+.menu .compte img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.menu h2{
+    font-size: 1em;
+    color: white;
+}
+.menu svg{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.menu .principal{
+    display: flex;
+    flex-direction: column;
+}
+.menu p{
+    font-size: 0.6em;
+    color: white;
+    margin: 20px 0;
+}
+.menu a{
+    color: white;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+.menu li{
+    padding: 5px 20px;
+}
+.menu li:hover{
+    color: #009344;
+    border-left: 4px solid white;
+}
+.menu li:hover a{
+    color: #009344;
+}
+.menu .second{
+    display: flex;
+    flex-direction: column;
+}
+.menu .discussions{
+    display: flex;
+    flex-direction: column;
+    padding: 8% 10%;
+}
+.menu .discussions svg{
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    margin-right: 15px;
+}
+.menu .discussions .message{
+    display: flex;
+    transition: .5s ease;
+}
+.menu .discussions .message:hover{
+    background: rgba(255, 255, 255, 0.075);
+    border-radius: 30px;
+    border: 0.7px solid white;
+}
+.menu .discussions .message h3{
+    color: white;
+    font-size: 0.9em;
+}
+.menu .discussions .message p{
+    color: rgb(214, 247, 210);
+}
+.menu .general{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.menu .principal p, .menu .general p{
+    padding: 0 20px;
+} 
+
+.menu .index{
+    background: white;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+    padding: 10px 20px;
+}
+.menu .index a{
+    font-weight: bold;
+    color: #009344;
+}
+.menu .index::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-bottom-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 white;
+}
+.menu .index::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 white;
+}
+/**/
+.fenetre{
+    width: 80%;
+    margin: 20px 0 20px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.barre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.062);
+}
+.barre h1{
+    font-size: 1em;
+}
+.espaces {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.espaces a {
+    padding: 5px 10px;
+    color: #00432f;
+    font-weight: 550;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+.espaces hr {
+    height: 20px;
+    width: 1px;
+    margin-right: 2px;
+    background: #00432f;
+    border: none;
+}
+.espaces a{
+    font-size: 0.7em;
+}
+.espaces a svg, .espaces button svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.espaces button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #00432f;
+    font-weight: 550;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+}
+
+.espaces img{
+    width: 35px;
+    height: 35px;
+}
+.user{
+    margin-left: 5%;
+}
+.interface{
+    width: 100%;
+}
+.cover{
+    height: 30vh;
+    background: linear-gradient(120deg, #056a36, #00432f);
+    padding: 3% 6%;
+    color: #fff;
+}
+.cover h1{
+    margin-bottom: 30px;
+}
+.cover .btn-message{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+}
+.cover svg{
+    width: 20px;
+    height: 20px;
+}
+.chemin{
+    display: flex;
+}
+.cover .chemin a{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 0.8em;
+}
+.cover .photo{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.cover .photo img{
+    width: 15vw;
+    height: 30vh;
+}
+.cover .chemin .active{
+    color: #ffc002;
+}
+.cover a:hover{
+    color: #ffc002;
+}
+.addimage{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.363);
+    border: none;
+    color: white;
+    bottom: 20%;
+    left: 68%;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+.eleve{
+    min-width: 440px;
+    height: 240px;
+    box-shadow: 0 0 5px rgb(99, 99, 99);
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 6%;
+    padding: 30px 35px;
+    position: relative;
+    overflow: hidden;
+}
+.eleve img{
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+}
+.eleve svg{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    color: #333;
+    background: #c4d5ca;
+    border-radius: 50%;
+    padding: 5px 8px;
+    
+}
+.eleve p{
+    color: #979797;
+}
+.eleve h3{
+    color: #363d3c;
+}
+.infos h2{
+    color: #363d3c;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+.bloc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.eleve .infos{
+    margin-right: 15px;
+}
+.anneee{
+    position: absolute;
+    top: 0;
+    right: -45px;
+    background: #ffc002;
+    padding: 10px 40px;
+    padding-left: 50px;
+    transform: rotate(30deg);
+}
+.anneee h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-align: center;
+    margin-left: 10px;
+}
+.fond{
+    display: none;
+    background: rgba(0, 0, 0, 0.452);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    position: absolute;
+}
+
+.zoneinfos{
+    padding: 30vh 5vw 5vh 5vw;
+}
+.input-zone{
+    height: 5vh;
+    width: 20vw;
+    margin: 10px;
+    position: relative;
+}
+.input-zone input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #009344;
+    border-radius: 10px;
+    outline: none;
+}
+.input-zone label{
+    position: absolute;
+    top: -20%;
+    left: 2%;
+    font-size: 0.8em;
+    background: white;
+    padding: 0 10px;
+    color: #009344;
+}
+.input-zone button{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    color: #033a1d91;
+    background: transparent;
+    border: none;
+}
+.input-zone button svg{
+    width: 20px;
+    height: 20px;
+}
+.correspondance{
+    display: flex;
+}
+.pass{
+    display: flex;
+}
+.eleves{
+    display: flex;
+    height: 59vh;
+    overflow-x: auto;
+}
+@media (max-width: 768px) {
+    .fond{
+    z-index: 98;
+}
+    .menu{
+        position: absolute;
+        left: -110%;
+        width: 96%;
+        height: 98vh;
+        transition: .5s ease;
+        overflow: hidden;
+        z-index: 99;
+    }
+    .closemenu{
+        display: flex;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .closemenu svg{
+        width: 30px;
+        height: 30px;
+    }
+    .fenetre{
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+    .barre{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 4px 8px;
+    }
+    .mobile h1{
+        font-size: 0.5em;
+    }
+    .mobile .espaces{
+        margin: 0;
+    }
+    .mobile .espaces a svg, .espaces button svg {
+    margin-right: 0;
+    }
+    .eleve{
+        width: 88vw;
+        height: 60vh;
+        flex-direction: column;
+    }
+    .eleve .image img{
+        width: 35vw;
+        height: 20vh;
+    }
+
+    .cover .photo{
+    right: 21%;
+}
+    .cover .photo img{
+    width: 53vw;
+    height: 30vh;
+}
+.input-zone{
+    height: 5vh;
+    width: 50vw;
+}
+    .input-zone label{
+    font-size: 0.6em;
+}
+
+}
+
+/*scroll bar*/
+/* Pour Chrome, Edge, Safari (WebKit) */
+::-webkit-scrollbar{
+    height: 5px;
+}
+::-webkit-scrollbar:hover{
+    height: 8px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(163, 163, 163);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #006e25;
+}
