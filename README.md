@@ -114,6 +114,11 @@ git lfs track "*.mkv"
 git lfs track "*.avi"
 git lfs track "*.pdf"
 git add .gitattributes
+//lorque le commit est déjà effectué une première fois
+git remote remove origin
+git remote add origin https://github.com/ZacharioMcarthur/culture.git
+git add .
+git commit -m "Nouveau commit — écrasement"
 
 # Packages importants
 composer require feedapi/feedapi
