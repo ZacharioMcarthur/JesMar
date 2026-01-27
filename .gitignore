@@ -5,6 +5,7 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
+.git
 /.fleet
 /.idea
 /.nova
@@ -23,3 +24,19 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/node_modules
+/storage/*.key
+/storage/app/public
+/storage/framework
+/storage/logs
+/public/storage
+*.sql
+*.mp4
+*.zip
+*.rar
+*.7z
+*.iso
+*.pdf
+*.png
+*.jpg
+*.jar

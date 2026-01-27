@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/css/inscription.css') }}">
-    <script src="{{ asset('assets/js/apply.js') }}" defer></script>
-    <title>JesMar - Inscription</title>
-</head>
+@section('title', 'JesMar - Inscription')
 
-<body>
+@push('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/inscription.css') }}" nonce="{{ csp_nonce() }}">
+@endpush
+
+@push('scripts')
+<script src="{{ asset('assets/js/apply.js') }}" nonce="{{ csp_nonce() }}" defer></script>
+@endpush
+
+@section('content')
     <div class="container">
         <h1>Inscription à JesMar</h1>
         <p>Formulaire d'inscription en ligne</p>
 
         <form action="#" method="POST">
+            @csrf
             <div class="form-section">
                 <h2>Informations personnelles</h2>
                 <div class="form-group">
@@ -52,6 +51,4 @@
             <button type="submit" class="submit-btn">Soumettre l'inscription</button>
         </form>
     </div>
-</body>
-
-</html>
+@endsection

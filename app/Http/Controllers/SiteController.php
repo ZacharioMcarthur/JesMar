@@ -19,17 +19,24 @@ class SiteController extends Controller
 
     public function formations()
     {
-        return view('formations');
+        // TODO: Charger les filières depuis la base de données
+        // $filieres = Filiere::with('matieres')->get();
+        return view('formations'); // , compact('filieres')
     }
 
     public function actualites()
     {
-        return view('actualites');
+        // TODO: Charger les événements et projets depuis la base de données
+        // $evenements = Evenement::orderBy('date_evenement', 'desc')->get();
+        // $projets = Projet::with('classe', 'profPrincipal')->orderBy('date_creation', 'desc')->get();
+        return view('actualites'); // , compact('evenements', 'projets')
     }
 
     public function inscription()
     {
-        return view('inscription');
+        // TODO: Charger les filières depuis la base de données
+        // $filieres = Filiere::all();
+        return view('inscription'); // , compact('filieres')
     }
 
     public function login()
@@ -61,10 +68,29 @@ class SiteController extends Controller
 
     public function registerSubmit(Request $request)
     {
-        // Pour l'instant, on simule une inscription simple
-        // Plus tard, remplacez par User::create()
+        // Validation des données
+        $validated = $request->validate([
+            'nom' => 'required|string|max:255',
+            'prenom' => 'required|string|max:255',
+            'email' => 'required|email|unique:parent,email|max:255',
+            'password' => 'required|string|min:8|confirmed',
+            'telephone' => 'required|string|max:20',
+            'adresse' => 'required|string',
+            'profession' => 'required|string|max:255',
+        ]);
 
-        // Simulation d'inscription réussie
+        // TODO: Implémenter la création du compte parent
+        // $parent = ParentUser::create([
+        //     'nom' => $validated['nom'],
+        //     'prenom' => $validated['prenom'],
+        //     'email' => $validated['email'],
+        //     'password' => Hash::make($validated['password']),
+        //     'telephone' => $validated['telephone'],
+        //     'adresse' => $validated['adresse'],
+        //     'profession' => $validated['profession'],
+        //     'date_creation' => now(),
+        // ]);
+
         return redirect()->route('login')->with('success', 'Inscription réussie ! Veuillez vous connecter.');
     }
 
