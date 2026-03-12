@@ -30,7 +30,9 @@
                 </p>
                 <p id="alert">
                     Vous devez procéder à une inscription selon nos normes
-                    pour disposer d'un espace utilisateur à JesMar. <a href="{{ route('register') }}">Démarrez l'inscription</a>
+                    pour disposer d'un espace utilisateur à JesMar. 
+                    <br>
+                    <br><a href="{{ route('register') }}">Démarrez l'inscription</a>
                 </p>
             </div>
         </div>
